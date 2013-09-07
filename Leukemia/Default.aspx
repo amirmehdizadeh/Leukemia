@@ -32,25 +32,20 @@
             </tr>
             <tr>
                 <td align="center" dir="rtl">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Radif" DataSourceID="ObjectDataSource1" ForeColor="Black" GridLines="Vertical" AllowPaging="True" PageSize="3" OnRowDeleting="GridView1_RowDeleting">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Sh_Bimar" DataSourceID="ObjectDataSource1" ForeColor="Black" GridLines="Vertical" AllowPaging="True" PageSize="3" OnRowDeleting="GridView1_RowDeleting">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
-                            <asp:BoundField DataField="Sh_Bimar" HeaderText="Sh_Bimar" SortExpression="Sh_Bimar" />
+                            <asp:BoundField DataField="Sh_Bimar" HeaderText="Sh_Bimar" ReadOnly="True" SortExpression="Sh_Bimar" />
                             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                             <asp:BoundField DataField="Family" HeaderText="Family" SortExpression="Family" />
                             <asp:BoundField DataField="Ghad" HeaderText="Ghad" SortExpression="Ghad" />
                             <asp:BoundField DataField="Vazn" HeaderText="Vazn" SortExpression="Vazn" />
                             <asp:BoundField DataField="Sex" HeaderText="Sex" SortExpression="Sex" />
-                            <asp:BoundField DataField="BirthDate_SH" HeaderText="BirthDate_SH" />
+                            <asp:BoundField DataField="BirthDate_SH" HeaderText="BirthDate_SH" SortExpression="BirthDate_SH" />
                             <asp:BoundField DataField="Phone_Number" HeaderText="Phone_Number" SortExpression="Phone_Number" />
                             <asp:BoundField DataField="Tashkhis" HeaderText="Tashkhis" SortExpression="Tashkhis" />
                             <asp:BoundField DataField="Barnam_Darmani" HeaderText="Barnam_Darmani" SortExpression="Barnam_Darmani" />
-                            <asp:BoundField DataField="MorajeeDate_SH" HeaderText="MorajeeDate_SH" />
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="ImageButton3" runat="server" CommandName="delete" Height="34px" ImageUrl="~/App_Themes/Theme1/Images/DELETE.png" OnClientClick="javascript:Del_Confirm('HDel');" />
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                            <asp:BoundField DataField="MorajeeDate_SH" HeaderText="MorajeeDate_SH" SortExpression="MorajeeDate_SH" />
                         </Columns>
                         <EmptyDataTemplate>
                             
@@ -300,7 +295,7 @@
                 <td>
                     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="Delete_Record" InsertMethod="Insert_Record" OldValuesParameterFormatString="original_{0}" SelectMethod="Select_Record" TypeName="BLLBimar" UpdateMethod="Update_Record">
                         <DeleteParameters>
-                            <asp:Parameter Name="Original_Radif" Type="Int32" />
+                            <asp:Parameter Name="Original_Sh_Bimar" Type="Int32" />
                         </DeleteParameters>
                         <InsertParameters>
                             <asp:Parameter Name="Sh_Bimar" Type="Int32" />
@@ -327,7 +322,7 @@
                             <asp:Parameter Name="tashkhis" Type="String" />
                             <asp:Parameter Name="barnam_darmani" Type="String" />
                             <asp:Parameter Name="morajee_date" Type="String" />
-                            <asp:Parameter Name="Original_Radif" Type="Int32" />
+                            <asp:Parameter Name="Original_Sh_Bimar" Type="Int32" />
                         </UpdateParameters>
                     </asp:ObjectDataSource>
                     <asp:HiddenField ID="HDel" runat="server" />

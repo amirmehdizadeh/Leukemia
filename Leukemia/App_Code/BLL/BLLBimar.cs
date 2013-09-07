@@ -36,10 +36,10 @@ public class BLLBimar
         int i;
         for (i = 0; i < dt.Rows.Count; i++)
         {
-            if (dt.Rows[i][4] != null)
+            if (dt.Rows[i][3] != null)
             {
-                dt.Rows[i][12] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][4].ToString()));
-                dt.Rows[i][13] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][11].ToString()));
+                dt.Rows[i][11] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][3].ToString()));
+                dt.Rows[i][12] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][10].ToString()));
             }
         }
         return dt;

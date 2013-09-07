@@ -90,7 +90,7 @@ WHERE        (Sh_Bimar = @Original_Sh_Bimar)</CommandText>
   <xs:element name="DSBimar" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DSBimar" msprop:Generator_UserDSName="DSBimar">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Bimar" msprop:Generator_TableClassName="BimarDataTable" msprop:Generator_TableVarName="tableBimar" msprop:Generator_RowChangedName="BimarRowChanged" msprop:Generator_TablePropName="Bimar" msprop:Generator_RowDeletingName="BimarRowDeleting" msprop:Generator_RowChangingName="BimarRowChanging" msprop:Generator_RowEvHandlerName="BimarRowChangeEventHandler" msprop:Generator_RowDeletedName="BimarRowDeleted" msprop:Generator_RowClassName="BimarRow" msprop:Generator_UserTableName="Bimar" msprop:Generator_RowEvArgName="BimarRowChangeEvent">
+        <xs:element name="Bimar" msprop:Generator_TableClassName="BimarDataTable" msprop:Generator_TableVarName="tableBimar" msprop:Generator_TablePropName="Bimar" msprop:Generator_RowDeletingName="BimarRowDeleting" msprop:Generator_RowChangingName="BimarRowChanging" msprop:Generator_RowEvHandlerName="BimarRowChangeEventHandler" msprop:Generator_RowDeletedName="BimarRowDeleted" msprop:Generator_UserTableName="Bimar" msprop:Generator_RowChangedName="BimarRowChanged" msprop:Generator_RowEvArgName="BimarRowChangeEvent" msprop:Generator_RowClassName="BimarRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Sh_Bimar" msprop:Generator_ColumnVarNameInTable="columnSh_Bimar" msprop:Generator_ColumnPropNameInRow="Sh_Bimar" msprop:Generator_ColumnPropNameInTable="Sh_BimarColumn" msprop:Generator_UserColumnName="Sh_Bimar" type="xs:int" />
@@ -140,6 +140,8 @@ WHERE        (Sh_Bimar = @Original_Sh_Bimar)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="morajee_Date" msprop:Generator_ColumnVarNameInTable="columnmorajee_Date" msprop:Generator_ColumnPropNameInRow="morajee_Date" msprop:Generator_ColumnPropNameInTable="morajee_DateColumn" msprop:Generator_UserColumnName="morajee_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BirthDate_SH" msprop:Generator_ColumnVarNameInTable="columnBirthDate_SH" msprop:Generator_ColumnPropNameInRow="BirthDate_SH" msprop:Generator_ColumnPropNameInTable="BirthDate_SHColumn" msprop:Generator_UserColumnName="BirthDate_SH" type="xs:string" minOccurs="0" />
+              <xs:element name="MorajeeDate_SH" msprop:Generator_ColumnVarNameInTable="columnMorajeeDate_SH" msprop:Generator_ColumnPropNameInRow="MorajeeDate_SH" msprop:Generator_ColumnPropNameInTable="MorajeeDate_SHColumn" msprop:Generator_UserColumnName="MorajeeDate_SH" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
