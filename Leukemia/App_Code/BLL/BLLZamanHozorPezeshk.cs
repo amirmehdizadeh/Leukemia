@@ -9,6 +9,7 @@ using DSZamanHozorPezeshkTableAdapters;
 /// </summary>
 /// 
 
+
 [System.ComponentModel.DataObject]
 public class BLLZamanHozorPezeshk
 {

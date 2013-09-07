@@ -2,28 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using DSNobatDehiTableAdapters;
+using DSPathalogyTableAdapters;
 
 /// <summary>
 /// Summary description for BLLNobatDehi
 /// </summary>
 /// 
+
+
 [System.ComponentModel.DataObject]
-public class BLLNobatDehi
+public class BLLPathalogy
 {
-    private DSNobatDehi.NobatDehiDataTable dt;
-    private DSNobatDehiTableAdapters.NobatDehiTableAdapter ad = null;
-    public DSNobatDehiTableAdapters.NobatDehiTableAdapter adapter
+    private DSPathalogy.PathalogyDataTable dt;
+    private DSPathalogyTableAdapters.PathalogyTableAdapter ad=null;
+    public  DSPathalogyTableAdapters.PathalogyTableAdapter  adapter
     {
         get
         {
             if (ad == null)
-                ad = new NobatDehiTableAdapter();
+                ad = new PathalogyTableAdapter() ;
             return ad;
         }
 
     }
-    public BLLNobatDehi()
+    public BLLPathalogy()
     {
         //
         // TODO: Add constructor logic here
@@ -31,16 +33,16 @@ public class BLLNobatDehi
     }
     //Select Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, true)]
-    public DSNobatDehi.NobatDehiDataTable Select_Record()
+    public DSPathalogy.PathalogyDataTable Select_Record()
     {
         dt = adapter.GetData();
         return dt;
     }
     //Insert Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert, true)]
-    public void Insert_Record(int Sh_Bimar, int Pezeshk_Number, string Hozor_Date, string Tozihat)
+    public void Insert_Record(int Sh_Bimar,string Type,string T,string M,string N,string Stage,string Nemone_Place,string pathalogy_Date)
     {
-        adapter.Insert(Sh_Bimar, Pezeshk_Number, common.Shamsi_to_Miladi(Hozor_Date), Tozihat);
+        adapter.Insert(Sh_Bimar,Type,T,M,N,Stage,Nemone_Place,common.Shamsi_to_Miladi(pathalogy_Date));
     }
     //Delete Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Delete, true)]
@@ -51,8 +53,8 @@ public class BLLNobatDehi
     }
     //Update Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update, true)]
-    public void Update_Record(int Pezeshk_Number, string Hozor_Date, string Tozihat, int Original_Sh_Bimar)
+    public void Update_Record(string type,string t,string m,string n,string stage,string nemone_place,string pathalogy_date,int Original_Sh_Bimar)
     {
-        adapter.Update(Pezeshk_Number, common.Shamsi_to_Miladi(Hozor_Date), Tozihat, Original_Sh_Bimar);
+        adapter.Update(type,t,m,n,stage,nemone_place,common.Shamsi_to_Miladi(pathalogy_date),Original_Sh_Bimar);
     }
 }

@@ -8,6 +8,8 @@ using DSNobatDehiTableAdapters;
 /// Summary description for BLLNobatDehi
 /// </summary>
 /// 
+
+
 [System.ComponentModel.DataObject]
 public class BLLNobatDehi
 {

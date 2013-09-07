@@ -9,6 +9,7 @@ using DSTajvizTableAdapters;
 /// </summary>
 /// 
 
+
 [System.ComponentModel.DataObject]
 public class BLLTajviz
 {

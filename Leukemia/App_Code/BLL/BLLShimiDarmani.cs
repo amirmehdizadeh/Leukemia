@@ -8,6 +8,7 @@ using DSShimiDarmaniTableAdapters;
 /// </summary>
 /// 
 
+
 [System.ComponentModel.DataObject]
 public class BLLShimiDarmani
 {
