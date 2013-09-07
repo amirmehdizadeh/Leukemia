@@ -41,13 +41,13 @@ public class BLLNemoneBardari
         adapter.Insert(Sh_Bimar, Bime, Hazine, common.Shamsi_to_Miladi(Nemone_Date), Tozihat);
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Delete,true)]
-    public void Delete_Record(int Original_ShBimar)
+    public void Delete_Record(int Original_Sh_Bimar)
     {
-        adapter.Delete(Original_ShBimar);
+        adapter.Delete(Original_Sh_Bimar);
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update,true)]
-    public void Update_Record(string bime, int hazine, string nemone_date, string tozihat,int Original_ShBimar)
+    public void Update_Record(string bime, int hazine, string nemone_date, string tozihat,int Original_Sh_Bimar)
     {
-        adapter.Update(bime, hazine, common.Shamsi_to_Miladi(nemone_date), tozihat, Original_ShBimar);
+        adapter.Update(bime, hazine, common.Shamsi_to_Miladi(nemone_date), tozihat, Original_Sh_Bimar);
     }
 }

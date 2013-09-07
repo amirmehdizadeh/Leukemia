@@ -33,6 +33,15 @@ public class BLLBimar
     public DSBimar.BimarDataTable Select_Record()
     {
         dt = adapter.GetData();
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][4] != null)
+            {
+                dt.Rows[i][12] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][4].ToString()));
+                dt.Rows[i][13] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][11].ToString()));
+            }
+        }
         return dt;
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert,true)]
@@ -41,14 +50,14 @@ public class BLLBimar
         adapter.Insert(Sh_Bimar, Name, Family, common.Shamsi_to_Miladi(Birth_Date), Ghad, Vazn, Sex, Phone_Number, Tashkhis, Barnam_Darmani, common.Shamsi_to_Miladi(morajee_Date));
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Delete,true)]
-    public void Delete_Record(int Original_ShBimar)
+    public void Delete_Record(int Original_Sh_Bimar)
     {
-        adapter.Delete(Original_ShBimar);
-    }
+        adapter.Delete(Original_Sh_Bimar);
+    }   
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update,true)]
-    public void Update_Record(string name,string family,string birth_date,int ghad,int vazn,string sex,string phone_number,string tashkhis,string barnam_darmani,string morajee_date,int Original_ShBimar)
+    public void Update_Record(int Sh_Bimar,string name,string family,string birth_date,int ghad,int vazn,string sex,string phone_number,string tashkhis,string barnam_darmani,string morajee_date,int Original_Sh_Bimar)
     {
-        adapter.Update(name, family, common.Shamsi_to_Miladi(birth_date), ghad, vazn, sex, phone_number, tashkhis, barnam_darmani, common.Shamsi_to_Miladi(morajee_date), Original_ShBimar);
+        adapter.Update(name, family, common.Shamsi_to_Miladi(birth_date), ghad, vazn, sex, phone_number, tashkhis, barnam_darmani, common.Shamsi_to_Miladi(morajee_date), Original_Sh_Bimar);
  
     }
 }

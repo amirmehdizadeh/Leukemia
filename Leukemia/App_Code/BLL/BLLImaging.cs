@@ -42,13 +42,13 @@ public class BLLImaging
 
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Delete,true)]
-    public void Delete_Record(int Original_ShBimar)
+    public void Delete_Record(int Original_Sh_Bimar)
     {
-        adapter.Delete(Original_ShBimar);
+        adapter.Delete(Original_Sh_Bimar);
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update,true)]
-    public void Update_Record(string us, string ct, string img_date, string tozihat,int Original_ShBimar)
+    public void Update_Record(string us, string ct, string img_date, string tozihat,int Original_Sh_Bimar)
     {
-        adapter.Update(us, ct, common.Shamsi_to_Miladi(img_date), tozihat, Original_ShBimar);
+        adapter.Update(us, ct, common.Shamsi_to_Miladi(img_date), tozihat, Original_Sh_Bimar);
     }
 }

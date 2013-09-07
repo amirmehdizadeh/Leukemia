@@ -11,4 +11,9 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
+    protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        if (HDel.Value == "false")
+            e.Cancel = true;
+    }
 }

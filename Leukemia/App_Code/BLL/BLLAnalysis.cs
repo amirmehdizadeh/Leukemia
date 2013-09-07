@@ -44,15 +44,15 @@ public class BLLAnalysis
     }
     //Delete Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Delete,true)]
-    public void Delete_Record(int Original_ShBimar)
+    public void Delete_Record(int Original_Sh_Bimar)
     {
-        adapter.Delete(Original_ShBimar);
+        adapter.Delete(Original_Sh_Bimar);
         
     }
     //Update Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update,true)]
-    public void Update_Record(string hb, string wbc, string plt, string cr, string lft, string analysys_date,int Original_ShBimar)
+    public void Update_Record(string hb, string wbc, string plt, string cr, string lft, string analysys_date,int Original_Sh_Bimar)
     {
-        adapter.Update(hb, wbc, plt, cr, lft, common.Shamsi_to_Miladi(analysys_date), Original_ShBimar);
+        adapter.Update(hb, wbc, plt, cr, lft, common.Shamsi_to_Miladi(analysys_date), Original_Sh_Bimar);
     }
 }
