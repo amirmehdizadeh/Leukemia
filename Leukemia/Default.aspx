@@ -14,6 +14,10 @@
         {
             height: 32px;
         }
+        .auto-style3
+        {
+            height: 232px;
+        }
     </style>
     <script src="Scripts/JavaScript.js"></script>
 
@@ -31,7 +35,7 @@
                 <td aria-haspopup="False">&nbsp;</td>
             </tr>
             <tr>
-                <td align="center" dir="rtl">
+                <td align="center" dir="rtl" class="auto-style3">
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Sh_Bimar" DataSourceID="ObjectDataSource1" ForeColor="Black" GridLines="Vertical" AllowPaging="True" PageSize="3" OnRowDeleting="GridView1_RowDeleting" OnRowCommand="GridView1_RowCommand">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
