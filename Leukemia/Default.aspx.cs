@@ -16,4 +16,20 @@ public partial class _Default : System.Web.UI.Page
         if (HDel.Value == "false")
             e.Cancel = true;
     }
+    protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (e.CommandName == "Upd")
+        {
+            HEdit.Value = e.CommandArgument.ToString();
+            FormView1.ChangeMode(FormViewMode.Edit);
+        }
+    }
+    protected void FormView1_ItemInserted(object sender, FormViewInsertedEventArgs e)
+    {
+        GridView1.DataBind();
+    }
+    protected void FormView1_ItemUpdated(object sender, FormViewUpdatedEventArgs e)
+    {
+        GridView1.DataBind();
+    }
 }

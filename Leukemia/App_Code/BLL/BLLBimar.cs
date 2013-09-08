@@ -60,4 +60,21 @@ public class BLLBimar
         adapter.Update(name, family, common.Shamsi_to_Miladi(birth_date), ghad, vazn, sex, phone_number, tashkhis, barnam_darmani, common.Shamsi_to_Miladi(morajee_date), Original_Sh_Bimar);
  
     }
+    [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
+    public DSBimar.BimarDataTable Select_ByShBimar(int sh_bimar)
+    {
+        dt = adapter.GetDataBy(sh_bimar);
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][3] != null && dt.Rows[i][10] != null)
+            {
+                dt.Rows[i][11] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][3].ToString()));
+                dt.Rows[i][12] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][10].ToString()));
+            }
+        }
+        return dt;
+
+
+    }
 }
