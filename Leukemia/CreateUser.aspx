@@ -57,7 +57,7 @@
                     <tr>
                         <td class="auto-style3" align="right">
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="#CC0000" ControlToValidate="txt_password" ValidationGroup="g1"></asp:RequiredFieldValidator>
-                            <asp:TextBox ID="txt_password" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_password" runat="server" TextMode="Password"></asp:TextBox>
                         </td>
                         <td>
                             <asp:Label ID="Label2" runat="server" Text="رمز عبور"></asp:Label>
@@ -71,7 +71,7 @@
                 <table class="auto-style1">
                     <tr>
                         <td class="auto-style4" align="right">
-                            <asp:TextBox ID="txt_password2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_password2" runat="server" TextMode="Password"></asp:TextBox>
                         </td>
                         <td>
                             <asp:Label ID="Label3" runat="server" Text="تکرار رمز عبور"></asp:Label>
@@ -90,7 +90,7 @@
         </tr>
         <tr>
             <td align="center">
-                <asp:Button ID="Button1" runat="server" Text="ایجاد کاربر" Height="36px" OnClick="Button1_Click" Width="112px" />
+                <asp:Button ID="Button1" runat="server" Text="ایجاد کاربر" Height="36px" OnClick="Button1_Click" Width="112px" ValidationGroup="g1" />
             </td>
         </tr>
         <tr>

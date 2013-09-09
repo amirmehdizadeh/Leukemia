@@ -34,6 +34,12 @@ public class BLLAnalysis
     public DSAnalysis.AnalysisDataTable Select_Record()
     {
         dt = adapter.GetData();
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][6] != null)
+                dt.Rows[i][7] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][6].ToString()));
+        }
         return dt;
     }
     //Insert Method
@@ -51,8 +57,20 @@ public class BLLAnalysis
     }
     //Update Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update,true)]
-    public void Update_Record(string hb, string wbc, string plt, string cr, string lft, string analysys_date,int Original_Sh_Bimar)
+    public void Update_Record(string hb, string wbc, string plt, string cr, string lft, string AnalysisDate_SH,int Original_Sh_Bimar)
     {
-        adapter.Update(hb, wbc, plt, cr, lft, common.Shamsi_to_Miladi(analysys_date), Original_Sh_Bimar);
+        adapter.Update(hb, wbc, plt, cr, lft, common.Shamsi_to_Miladi(AnalysisDate_SH), Original_Sh_Bimar);
+    }
+    [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
+    public DSAnalysis.AnalysisDataTable Select_ByShBimar(int sh_bimar)
+    {
+        dt = adapter.GetDataBy(sh_bimar);
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][6] != null)
+                dt.Rows[i][7] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][6].ToString()));
+        }
+        return dt;
     }
 }

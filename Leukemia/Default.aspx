@@ -372,14 +372,14 @@
                             <asp:Parameter Name="Sh_Bimar" Type="Int32" />
                             <asp:Parameter Name="name" Type="String" />
                             <asp:Parameter Name="family" Type="String" />
-                            <asp:Parameter Name="birth_date" Type="String" />
+                            <asp:Parameter Name="BirthDate_SH" Type="String" />
                             <asp:Parameter Name="ghad" Type="Int32" />
                             <asp:Parameter Name="vazn" Type="Int32" />
                             <asp:Parameter Name="sex" Type="String" />
                             <asp:Parameter Name="phone_number" Type="String" />
                             <asp:Parameter Name="tashkhis" Type="String" />
                             <asp:Parameter Name="barnam_darmani" Type="String" />
-                            <asp:Parameter Name="morajee_date" Type="String" />
+                            <asp:Parameter Name="MorajeeDate_SH" Type="String" />
                             <asp:Parameter Name="Original_Sh_Bimar" Type="Int32" />
                         </UpdateParameters>
                     </asp:ObjectDataSource>
@@ -408,14 +408,14 @@
                             <asp:Parameter Name="Sh_Bimar" Type="Int32" />
                             <asp:Parameter Name="name" Type="String" />
                             <asp:Parameter Name="family" Type="String" />
-                            <asp:Parameter Name="birth_date" Type="String" />
+                            <asp:Parameter Name="BirthDate_SH" Type="String" />
                             <asp:Parameter Name="ghad" Type="Int32" />
                             <asp:Parameter Name="vazn" Type="Int32" />
                             <asp:Parameter Name="sex" Type="String" />
                             <asp:Parameter Name="phone_number" Type="String" />
                             <asp:Parameter Name="tashkhis" Type="String" />
                             <asp:Parameter Name="barnam_darmani" Type="String" />
-                            <asp:Parameter Name="morajee_date" Type="String" />
+                            <asp:Parameter Name="MorajeeDate_SH" Type="String" />
                             <asp:Parameter Name="Original_Sh_Bimar" Type="Int32" />
                         </UpdateParameters>
                     </asp:ObjectDataSource>

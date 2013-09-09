@@ -55,9 +55,9 @@ public class BLLBimar
         adapter.Delete(Original_Sh_Bimar);
     }   
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update,true)]
-    public void Update_Record(int Sh_Bimar,string name,string family,string birth_date,int ghad,int vazn,string sex,string phone_number,string tashkhis,string barnam_darmani,string morajee_date,int Original_Sh_Bimar)
+    public void Update_Record(int Sh_Bimar,string name,string family,string BirthDate_SH,int ghad,int vazn,string sex,string phone_number,string tashkhis,string barnam_darmani,string MorajeeDate_SH,int Original_Sh_Bimar)
     {
-        adapter.Update(name, family, common.Shamsi_to_Miladi(birth_date), ghad, vazn, sex, phone_number, tashkhis, barnam_darmani, common.Shamsi_to_Miladi(morajee_date), Original_Sh_Bimar);
+        adapter.Update(name, family, common.Shamsi_to_Miladi(BirthDate_SH), ghad, vazn, sex, phone_number, tashkhis, barnam_darmani, common.Shamsi_to_Miladi(MorajeeDate_SH), Original_Sh_Bimar);
  
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
