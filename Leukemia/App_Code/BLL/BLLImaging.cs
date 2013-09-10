@@ -33,6 +33,12 @@ public class BLLImaging
     public DSImaging.ImagingDataTable Select_Record()
     {
         dt = adapter.GetData();
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][3] != null)
+                dt.Rows[i][5] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][3].ToString()));
+        }
         return dt;
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert,true)]
@@ -47,8 +53,21 @@ public class BLLImaging
         adapter.Delete(Original_Sh_Bimar);
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update,true)]
-    public void Update_Record(string us, string ct, string img_date, string tozihat,int Original_Sh_Bimar)
+    public void Update_Record(string us, string ct, string ImgDate_SH, string tozihat,int Original_Sh_Bimar)
     {
-        adapter.Update(us, ct, common.Shamsi_to_Miladi(img_date), tozihat, Original_Sh_Bimar);
+        adapter.Update(us, ct, common.Shamsi_to_Miladi(ImgDate_SH), tozihat, Original_Sh_Bimar);
+    }
+    [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
+    public DSImaging.ImagingDataTable Select_ByShBimar(int sh_Bimar)
+    {
+        dt = adapter.GetDataBy(sh_Bimar);
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][3] != null)
+                dt.Rows[i][5] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][3].ToString()));
+        }
+        return dt;
+
     }
 }
