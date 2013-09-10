@@ -26,7 +26,7 @@
     <form id="form1" runat="server">
         <table class="auto-style1">
             <tr>
-                <td>&nbsp;</td>
+                <td class="auto-style2"></td>
             </tr>
             <tr>
                 <td class="auto-style2"></td>
@@ -369,7 +369,6 @@
                             <asp:Parameter Name="morajee_Date" Type="String" />
                         </InsertParameters>
                         <UpdateParameters>
-                            <asp:Parameter Name="Sh_Bimar" Type="Int32" />
                             <asp:Parameter Name="name" Type="String" />
                             <asp:Parameter Name="family" Type="String" />
                             <asp:Parameter Name="BirthDate_SH" Type="String" />
@@ -405,7 +404,6 @@
                             <asp:ControlParameter ControlID="HEdit" Name="sh_bimar" PropertyName="Value" Type="Int32" />
                         </SelectParameters>
                         <UpdateParameters>
-                            <asp:Parameter Name="Sh_Bimar" Type="Int32" />
                             <asp:Parameter Name="name" Type="String" />
                             <asp:Parameter Name="family" Type="String" />
                             <asp:Parameter Name="BirthDate_SH" Type="String" />
