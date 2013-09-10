@@ -46,7 +46,7 @@ public partial class Analysis : System.Web.UI.Page
         if (e.CommandName == "Upd")
         {
             HEdit.Value = e.CommandArgument.ToString();
-            FormView1.ChangeMode(FormViewMode.Edit);
+            FormView2.ChangeMode(FormViewMode.Edit);
         }
     }
     protected void FormView2_ItemUpdated(object sender, FormViewUpdatedEventArgs e)

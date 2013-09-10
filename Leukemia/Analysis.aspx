@@ -32,10 +32,15 @@
                 </td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td>
+                    
+                </td>
             </tr>
             <tr>
                 <td dir="rtl" align="center">
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                   
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Sh_Bimar" DataSourceID="ObjectDataSource1" ForeColor="Black" GridLines="Vertical" OnRowDeleting="GridView1_RowDeleting" OnRowCommand="GridView1_RowCommand">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
@@ -66,11 +71,16 @@
                         <SortedAscendingHeaderStyle BackColor="#848384" />
                         <SortedDescendingCellStyle BackColor="#EAEAD3" />
                         <SortedDescendingHeaderStyle BackColor="#575357" />
-                    </asp:GridView>
+
+                        </asp:GridView>
+                         </ContentTemplate>
+                         </asp:UpdatePanel>
                 </td>
             </tr>
             <tr>
                 <td align="center" class="auto-style2">
+                    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                        <ContentTemplate>
                     <asp:FormView ID="FormView1" runat="server" DataKeyNames="Sh_Bimar" DataSourceID="ObjectDataSource2" DefaultMode="Insert" OnItemInserted="FormView1_ItemInserted" OnItemUpdated="FormView1_ItemUpdated" Height="287px">
                         <EditItemTemplate>
                             <table class="auto-style1">
@@ -313,14 +323,15 @@
                             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
                             &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
                         </ItemTemplate>
-                    </asp:FormView>
+                        </asp:FormView>
+                        </ContentTemplate>
+                        </asp:UpdatePanel>
                 </td>
             </tr>
             <tr>
                 <td align="center" dir="rtl">
                     
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <ContentTemplate>
+                    
                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Sh_Bimar" DataSourceID="ObjectDataSource3" ForeColor="Black" GridLines="Vertical" OnRowDeleting="GridView2_RowDeleting" OnRowCommand="GridView2_RowCommand">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
@@ -331,7 +342,7 @@
                             <asp:BoundField DataField="Tozihat" HeaderText="Tozihat" SortExpression="Tozihat" />
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:ImageButton ID="ImageButton6" runat="server" CommandName="delete" Height="35px" ImageUrl="~/App_Themes/Theme1/Images/DELETE.png" OnClientClick="javascript_Del_Confirm('HDel');" />
+                                    <asp:ImageButton ID="ImageButton6" runat="server" CommandName="delete" Height="35px" ImageUrl="~/App_Themes/Theme1/Images/DELETE.png" OnClientClick="javascript:Del_Confirm('HDel');" />
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField>
@@ -350,16 +361,14 @@
                         <SortedDescendingCellStyle BackColor="#EAEAD3" />
                         <SortedDescendingHeaderStyle BackColor="#575357" />
                     </asp:GridView>
-                    </ContentTemplate>
-                    </asp:UpdatePanel>
+                   
                     
                 </td>
             </tr>
             <tr>
                 <td align="center">
                     
-                    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                        <ContentTemplate>
+                   
                             <asp:FormView ID="FormView2" runat="server" DataKeyNames="Sh_Bimar" DataSourceID="ObjectDataSource4" DefaultMode="Insert" OnItemInserted="FormView2_ItemInserted" OnItemUpdated="FormView2_ItemUpdated">
                         <EditItemTemplate>
                             <table class="auto-style1">
@@ -545,8 +554,7 @@
                             &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
                         </ItemTemplate>
                     </asp:FormView>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
+
                     
                 </td>
             </tr>
