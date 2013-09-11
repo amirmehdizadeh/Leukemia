@@ -53,4 +53,25 @@ public partial class Analysis : System.Web.UI.Page
     {
         GridView2.DataBind();
     }
+    protected void FormView3_ItemInserted(object sender, FormViewInsertedEventArgs e)
+    {
+        GridView3.DataBind();
+    }
+    protected void GridView3_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (e.CommandName == "Upd")
+        {
+            HEdit.Value = e.CommandArgument.ToString();
+            FormView3.ChangeMode(FormViewMode.Edit);
+        }
+    }
+    protected void GridView3_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        if (HDel.Value == "false")
+            e.Cancel = true;
+    }
+    protected void FormView3_ItemUpdated(object sender, FormViewUpdatedEventArgs e)
+    {
+        GridView3.DataBind();
+    }
 }

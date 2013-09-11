@@ -36,6 +36,15 @@ public class BLLPathalogy
     public DSPathalogy.PathalogyDataTable Select_Record()
     {
         dt = adapter.GetData();
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][7] != null)
+            {
+                dt.Rows[i][8] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][7].ToString()));
+            }
+
+        }
         return dt;
     }
     //Insert Method
@@ -53,8 +62,23 @@ public class BLLPathalogy
     }
     //Update Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update, true)]
-    public void Update_Record(string type,string t,string m,string n,string stage,string nemone_place,string pathalogy_date,int Original_Sh_Bimar)
+    public void Update_Record(string type,string t,string m,string n,string stage,string nemone_place,string PathalogyDate_SH,int Original_Sh_Bimar)
     {
-        adapter.Update(type,t,m,n,stage,nemone_place,common.Shamsi_to_Miladi(pathalogy_date),Original_Sh_Bimar);
+        adapter.Update(type,t,m,n,stage,nemone_place,common.Shamsi_to_Miladi(PathalogyDate_SH),Original_Sh_Bimar);
+    }
+    [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
+    public DSPathalogy.PathalogyDataTable Select_ByShBimar(int sh_bimar)
+    {
+        dt = adapter.GetDataBy(sh_bimar);
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][7] != null)
+            {
+                dt.Rows[i][8] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][7].ToString()));
+            }
+
+        }
+        return dt;
     }
 }
