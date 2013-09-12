@@ -51,8 +51,22 @@ public class BLLNobatDehi
     }
     //Update Method
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update, true)]
-    public void Update_Record(int Pezeshk_Number, string Hozor_Date, string Tozihat, int Original_Sh_Bimar)
+    public void Update_Record(int Pezeshk_Number, string HozorDate_SH, string Tozihat, int Original_Sh_Bimar)
     {
-        adapter.Update(Pezeshk_Number, common.Shamsi_to_Miladi(Hozor_Date),Tozihat, Original_Sh_Bimar);
+        adapter.Update(Pezeshk_Number, common.Shamsi_to_Miladi(HozorDate_SH),Tozihat, Original_Sh_Bimar);
+    }
+    [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
+    public DSNobatDehi.NobatDehiDataTable Select_ByShBimar(int sh_bimar)
+    {
+        dt = adapter.GetDataBy(sh_bimar);
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][2] != null)
+            {
+                dt.Rows[i][4] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][2].ToString()));
+            }
+        }
+        return dt;
     }
 }

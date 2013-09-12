@@ -77,9 +77,6 @@
                 </td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
                 <td align="center" dir="rtl">
                     <asp:FormView ID="FormView1" runat="server" DataKeyNames="Sh_Bimar" DataSourceID="ObjectDataSource2" DefaultMode="Insert" OnItemInserted="FormView1_ItemInserted" OnItemUpdated="FormView1_ItemUpdated">
                         <EditItemTemplate>
@@ -221,14 +218,14 @@
                                         <asp:Label ID="Label2" runat="server" Text="نام"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txt_name" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_name0" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
                                     </td>
                                     <td>&nbsp;</td>
                                     <td>
                                         <asp:Label ID="Label3" runat="server" Text="نام خانوادگی"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txt_family" runat="server" Text='<%# Bind("Family") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_family0" runat="server" Text='<%# Bind("Family") %>'></asp:TextBox>
                                     </td>
                                     <td>&nbsp;</td>
                                 </tr>
@@ -237,21 +234,21 @@
                                         <asp:Label ID="Label4" runat="server" Text="تاریخ تولد"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txt_birthdate" runat="server" Text='<%# Bind("Birth_Date") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_birthdate0" runat="server" Text='<%# Bind("Birth_Date") %>'></asp:TextBox>
                                     </td>
                                     <td>&nbsp;</td>
                                     <td>
                                         <asp:Label ID="Label5" runat="server" Text="قد"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txt_ghad" runat="server" Text='<%# Bind("Ghad") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_ghad0" runat="server" Text='<%# Bind("Ghad") %>'></asp:TextBox>
                                     </td>
                                     <td>&nbsp;</td>
                                     <td>
                                         <asp:Label ID="Label6" runat="server" Text="وزن"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txt_vazn" runat="server" Text='<%# Bind("Vazn") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_vazn0" runat="server" Text='<%# Bind("Vazn") %>'></asp:TextBox>
                                     </td>
                                     <td>&nbsp;</td>
                                 </tr>
@@ -260,21 +257,21 @@
                                         <asp:Label ID="Label7" runat="server" Text="جنسیت"></asp:Label>
                                     </td>
                                     <td class="auto-style2">
-                                        <asp:TextBox ID="txt_sex" runat="server" Text='<%# Bind("Sex") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_sex0" runat="server" Text='<%# Bind("Sex") %>'></asp:TextBox>
                                     </td>
                                     <td class="auto-style2"></td>
                                     <td class="auto-style2">
                                         <asp:Label ID="Label8" runat="server" Text="شماره تلفن"></asp:Label>
                                     </td>
                                     <td class="auto-style2">
-                                        <asp:TextBox ID="txt_phonenumber" runat="server" Text='<%# Bind("Phone_Number") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_phonenumber0" runat="server" Text='<%# Bind("Phone_Number") %>'></asp:TextBox>
                                     </td>
                                     <td class="auto-style2"></td>
                                     <td class="auto-style2">
                                         <asp:Label ID="Label9" runat="server" Text="تشخیص"></asp:Label>
                                     </td>
                                     <td class="auto-style2">
-                                        <asp:TextBox ID="txt_tashkhis" runat="server" Text='<%# Bind("Tashkhis") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_tashkhis0" runat="server" Text='<%# Bind("Tashkhis") %>'></asp:TextBox>
                                     </td>
                                     <td class="auto-style2"></td>
                                 </tr>
@@ -283,14 +280,14 @@
                                         <asp:Label ID="Label10" runat="server" Text="برنامه درمانی"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txt_bdarmani" runat="server" Text='<%# Bind("Barnam_Darmani") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_bdarmani0" runat="server" Text='<%# Bind("Barnam_Darmani") %>'></asp:TextBox>
                                     </td>
                                     <td>&nbsp;</td>
                                     <td>
                                         <asp:Label ID="Label11" runat="server" Text="تاریخ مراجعه"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txt_mdate" runat="server" Text='<%# Bind("morajee_Date") %>'></asp:TextBox>
+                                        <asp:TextBox ID="txt_mdate0" runat="server" Text='<%# Bind("morajee_Date") %>'></asp:TextBox>
                                     </td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
@@ -336,6 +333,10 @@
                         </InsertItemTemplate>
                     </asp:FormView>
                 </td>
+            </tr>
+            <tr>
+                <td align="center" dir="rtl">
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td>&nbsp;</td>

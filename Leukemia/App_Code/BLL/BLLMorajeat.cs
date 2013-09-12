@@ -33,6 +33,15 @@ public class BLLMorajeat
     public DSMorajeat.MorajeatDataTable Select_Record()
     {
         dt = adapter.GetData();
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][5] != null && dt.Rows[i][6] != null)
+            {
+                dt.Rows[i][8] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][5].ToString()));
+                dt.Rows[i][9] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][6].ToString()));
+            }
+        }
         return dt;
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert,true)]
@@ -47,8 +56,23 @@ public class BLLMorajeat
         adapter.Delete(Original_Sh_Bimar);
     }
     [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update,true)]
-    public void Update_Record(string bime, int hazine, int sh_nobat, int vazn, string next_morajee, string morajee_date, string tozihat,int Original_Sh_Bimar)
+    public void Update_Record(string bime, int hazine, int sh_nobat, int vazn, string NextMorajee_SH, string MorajeeDate_SH, string tozihat,int Original_Sh_Bimar)
     {
-        adapter.Update(bime, hazine, sh_nobat, vazn, common.Shamsi_to_Miladi(next_morajee), common.Shamsi_to_Miladi(morajee_date), tozihat, Original_Sh_Bimar);
+        adapter.Update(bime, hazine, sh_nobat, vazn, common.Shamsi_to_Miladi(NextMorajee_SH), common.Shamsi_to_Miladi(MorajeeDate_SH), tozihat, Original_Sh_Bimar);
+    }
+    [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
+    public DSMorajeat.MorajeatDataTable Select_ByShBimar(int sh_bimar)
+    {
+        dt = adapter.GetDataBy(sh_bimar);
+        int i;
+        for (i = 0; i < dt.Rows.Count; i++)
+        {
+            if (dt.Rows[i][5] != null && dt.Rows[i][6] != null)
+            {
+                dt.Rows[i][8] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][5].ToString()));
+                dt.Rows[i][9] = common.Miladi_to_Shamsi(Convert.ToDateTime(dt.Rows[i][6].ToString()));
+            }
+        }
+        return dt;
     }
 }
