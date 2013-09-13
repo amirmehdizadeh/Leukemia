@@ -39,9 +39,9 @@ public partial class Login : System.Web.UI.Page
     protected void Login1_LoggedIn(object sender, EventArgs e)
     {
         Session["username"] = Login1.UserName;
-        //if (Login1.UserName == "admin")
-           // Response.Redirect("Default2.aspx");
-        //else
-            //Response.Redirect("Default3.aspx");
+        if (Login1.UserName == "admin")
+            Response.Redirect("Default2.aspx");
+        else
+            Response.Redirect("Default2.aspx");
     }
 }

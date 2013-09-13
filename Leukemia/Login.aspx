@@ -10,6 +10,10 @@
         {
             width: 100%;
         }
+        .auto-style2
+        {
+            width: 135px;
+        }
     </style>
 </head>
 <body>
@@ -48,7 +52,7 @@
                                                 <td align="right">
                                                     <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">شماره پرونده</asp:Label>
                                                 </td>
-                                                <td>
+                                                <td class="auto-style2">
                                                     <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
                                                     <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                                 </td>
@@ -57,7 +61,7 @@
                                                 <td align="right">
                                                     <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">رمز عبور</asp:Label>
                                                 </td>
-                                                <td>
+                                                <td class="auto-style2">
                                                     <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
                                                     <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                                 </td>
