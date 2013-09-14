@@ -2,14 +2,15 @@
 <xs:schema id="DSZamanHozorPezeshk" targetNamespace="http://tempuri.org/DSZamanHozorPezeshk.xsd" xmlns:mstns="http://tempuri.org/DSZamanHozorPezeshk.xsd" xmlns="http://tempuri.org/DSZamanHozorPezeshk.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="LeukemiaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LeukemiaConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.LeukemiaConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="LeukemiaConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LeukemiaConnectionString1 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.LeukemiaConnectionString1.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ZamanHozorPezeshkTableAdapter" GeneratorDataComponentClassName="ZamanHozorPezeshkTableAdapter" Name="ZamanHozorPezeshk" UserDataComponentName="ZamanHozorPezeshkTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="LeukemiaConnectionString (Web.config)" DbObjectName="Leukemia.dbo.ZamanHozorPezeshk" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="LeukemiaConnectionString1 (Web.config)" DbObjectName="Leukemia.dbo.ZamanHozorPezeshk" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [ZamanHozorPezeshk] WHERE (([Pezeshk_Number] = @Original_Pezeshk_Number))</CommandText>
@@ -68,7 +69,7 @@ WHERE        (Pezeshk_Number = @Original_Pezeshk_Number)</CommandText>
   <xs:element name="DSZamanHozorPezeshk" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DSZamanHozorPezeshk" msprop:Generator_UserDSName="DSZamanHozorPezeshk">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ZamanHozorPezeshk" msprop:Generator_TableClassName="ZamanHozorPezeshkDataTable" msprop:Generator_TableVarName="tableZamanHozorPezeshk" msprop:Generator_RowChangedName="ZamanHozorPezeshkRowChanged" msprop:Generator_TablePropName="ZamanHozorPezeshk" msprop:Generator_RowDeletingName="ZamanHozorPezeshkRowDeleting" msprop:Generator_RowChangingName="ZamanHozorPezeshkRowChanging" msprop:Generator_RowEvHandlerName="ZamanHozorPezeshkRowChangeEventHandler" msprop:Generator_RowDeletedName="ZamanHozorPezeshkRowDeleted" msprop:Generator_RowClassName="ZamanHozorPezeshkRow" msprop:Generator_UserTableName="ZamanHozorPezeshk" msprop:Generator_RowEvArgName="ZamanHozorPezeshkRowChangeEvent">
+        <xs:element name="ZamanHozorPezeshk" msprop:Generator_TableClassName="ZamanHozorPezeshkDataTable" msprop:Generator_TableVarName="tableZamanHozorPezeshk" msprop:Generator_TablePropName="ZamanHozorPezeshk" msprop:Generator_RowDeletingName="ZamanHozorPezeshkRowDeleting" msprop:Generator_RowChangingName="ZamanHozorPezeshkRowChanging" msprop:Generator_RowEvHandlerName="ZamanHozorPezeshkRowChangeEventHandler" msprop:Generator_RowDeletedName="ZamanHozorPezeshkRowDeleted" msprop:Generator_UserTableName="ZamanHozorPezeshk" msprop:Generator_RowChangedName="ZamanHozorPezeshkRowChanged" msprop:Generator_RowEvArgName="ZamanHozorPezeshkRowChangeEvent" msprop:Generator_RowClassName="ZamanHozorPezeshkRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Pezeshk_Number" msprop:Generator_ColumnVarNameInTable="columnPezeshk_Number" msprop:Generator_ColumnPropNameInRow="Pezeshk_Number" msprop:Generator_ColumnPropNameInTable="Pezeshk_NumberColumn" msprop:Generator_UserColumnName="Pezeshk_Number" type="xs:int" />
@@ -81,6 +82,7 @@ WHERE        (Pezeshk_Number = @Original_Pezeshk_Number)</CommandText>
               </xs:element>
               <xs:element name="Hozor" msprop:Generator_ColumnVarNameInTable="columnHozor" msprop:Generator_ColumnPropNameInRow="Hozor" msprop:Generator_ColumnPropNameInTable="HozorColumn" msprop:Generator_UserColumnName="Hozor" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Finish" msprop:Generator_ColumnVarNameInTable="columnFinish" msprop:Generator_ColumnPropNameInRow="Finish" msprop:Generator_ColumnPropNameInTable="FinishColumn" msprop:Generator_UserColumnName="Finish" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HozorDate_SH" msprop:Generator_ColumnVarNameInTable="columnHozorDate_SH" msprop:Generator_ColumnPropNameInRow="HozorDate_SH" msprop:Generator_ColumnPropNameInTable="HozorDate_SHColumn" msprop:Generator_UserColumnName="HozorDate_SH" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

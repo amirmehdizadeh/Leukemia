@@ -24,7 +24,7 @@
         }
         .auto-style10
         {
-            width: 358px;
+            width: 344px;
         }
     </style>
 </head>
