@@ -5,31 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
-    }
-    protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
-    {
-        if (HDel.Value == "false")
-            e.Cancel = true;
-    }
-    protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
-    {
-        if (e.CommandName == "Upd")
-        {
-            HEdit.Value = e.CommandArgument.ToString();
-            FormView1.ChangeMode(FormViewMode.Edit);
-        }
-    }
-    protected void FormView1_ItemInserted(object sender, FormViewInsertedEventArgs e)
-    {
-        GridView1.DataBind();
-    }
-    protected void FormView1_ItemUpdated(object sender, FormViewUpdatedEventArgs e)
-    {
-        GridView1.DataBind();
     }
 }
