@@ -44,7 +44,9 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button1" runat="server" Height="45px" OnClick="Button1_Click" Text="Export" Width="119px" />
+                </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>

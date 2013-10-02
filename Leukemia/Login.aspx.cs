@@ -42,6 +42,6 @@ public partial class Login : System.Web.UI.Page
         if (Login1.UserName == "admin")
             Response.Redirect("Default2.aspx");
         else
-            Response.Redirect("Default2.aspx");
+            Response.Redirect("Default.aspx");
     }
 }
